@@ -3,11 +3,11 @@ def calculate_hypotenuse(adjacent_leg, opposite_leg):
 
     hypotenuse = squared_hypotenuse ** 0.5
 
-    return "Hypotenuse", hypotenuse
+    return hypotenuse
     
 
 adjacent = int(input ("How Long Is The Adjacent leg ?: ") )
 
 opposite = int(input ("How Long Is The Opposite Leg?: ") )
 
-print(calculate_hypotenuse(adjacent, opposite))
+print('Hypotenuse = ', calculate_hypotenuse(adjacent, opposite))
