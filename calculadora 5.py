@@ -1,85 +1,60 @@
-bandera = 1
-while bandera:
-    
-    print("calculadora ")
-    print("selecciona una opcion ")
-    print("1.- sumar  ")
-    print("2.- restar ")
-    print("3.- dividir  ")
-    print("4.- multiplicar ")
-    print("5.- salir ")
-    r = input("elige una opcion ")
-    
-    if r == "1" or r == "2" or r == "3" or r == "4" or r == "5":
-        print("bien ") 
-               
-        if r == "1":
-            print(" suma ")
-            print(" elije los numeros a sumar")
-            a = input(" escribe el numero a ")
-            if a.isdigit():
-                a = int(a)
-                b = input(" escribe el numero b ")
-                if b.isdigit():
-                    b = int(b)
-                    c = a + b 
-                    print(c) 
-                else:
-                    print(" error ")
-            else:
-                print(" error ") 
-                
-        elif r == "2":
-            print(" resta ")
-            print(" elige los nuneros a restar")
-            a = input(" escribe el numero a ")
-            if a.isdigit():
-                a = int(a)
-                b = input(" escribe el numero b ")
-                if b.isdigit():
-                    b = int(b)
-                    c = a - b
-                    print(c) 
-                else:
-                    print(" error ")
-            else:
-                print(" error ")
-                
-        elif r == "3":
-            print(" division ")
-            print(" elige los nuneros a dividir ")
-            a = input(" escribe el numero a ")
-            if a.isdigit():
-                a = int(a)
-                b = input(" escribe el numero b ")
-                if b.isdigit():
-                    b = int(b)
-                    c = a / b
-                    print(c) 
-                else:
-                    print(" error ")
-            else:
-                print(" error ")
-                
-        elif r == "4":
-            print(" multiplicacion ")
-            print(" elige los nuneros a multiplicar ")
-            a = input(" escribe el numero a ")
-            if a.isdigit():
-                a = int(a)
-                b = input(" escribe el numero b ")
-                if b.isdigit():
-                    b = int(b)
-                    c = a * b
-                    print(c) 
-                else:
-                    print(" error ")
-            else:
-                print(" error ")
-                             
-        elif r == "5":
-            print(" adios ")
-            bandera = 0
-                                  
-    else:
-        print(" error ")
+def menu():
+    print("[A]ddition\n[S]ubtraction\n[M]ultiplication\n[D]ivision\n[E]xit")
+
+def addition(a, b):
+	return a + b
+	
+def subtraction(a, b):
+	return a - b
+	
+def multiplication(a, b):
+	return a * b
+	
+def division(a, b):
+	return a / b
+	
+def valid_number():
+	while True:
+		num = input("\nEnter A Number ")
+		if not num.isdigit():
+			print("\n", error)
+		else:
+			num = int(num)
+			return num
+	
+#Global Variables
+error = "Enter A Valid Number"
+	
+while True:
+	print("\nWelcome To Calculator\n ")
+	menu()
+	answer = input("\nChoose An Option: ")
+	
+	if answer == "A" or answer == "a":
+		print("\nSum Of Two Numbers")
+		a = valid_number()
+		b = valid_number()
+		print(addition(a, b))
+					
+	elif answer == "S" or answer == "s":
+		print("\nSubstraction Of Two Numbers")
+		a = valid_number()
+		b = valid_number()
+		print("\n", subtraction(a, b))
+					
+	elif answer == "M" or answer == "m":
+		print("\nMultiplication Of Two Numbers")
+		a = valid_number()
+		b = valid_number()
+		print("\n", multiplication(a, b))
+					
+	elif answer == "D" or answer == "d":
+		print("\nDivision Of Two Numbers")
+		a = valid_number()
+		b = valid_number()
+		print("\n", division(a, b))
+	
+	elif answer == "E" or answer == "e":
+		print("\nLeaving, Come Back Soon")
+		break
+        
