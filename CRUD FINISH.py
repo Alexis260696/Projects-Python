@@ -45,7 +45,6 @@ def modificar_empleados():
         else:
             print("\nEl empleado ingresado no se encuentra en la base de datos")
 
-
 def eliminar_empleado():
     codigo = input("\nIngrese el codigo del empleado: ")
     if codigo.isdigit():
@@ -55,8 +54,6 @@ def eliminar_empleado():
             print("\nEmpleado eliminado exitosamente")
         else:
             print("\nEl empleado ingresado no se encuentra en la base de datos")
-
-
 
 
 # variables
