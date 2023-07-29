@@ -1,21 +1,10 @@
-a = 0
-b = 1
-bandera = 1
-while bandera:
-    print(" fibonacci ")
-    n = input("write a number ")
-
-    if not n.isdigit():
-        print("error")
-    else:
-        n = int(n)
-        for i in range(0,n):
-            if i <= 1:
-                print(i)
-            else:
-                c = a + b
-                a = b
-                b = c
-                print(c)
-
-
+def fibo(n):
+	if n <= 1:
+		return n
+	else:
+		return fibo(n-1) + fibo(n-2)
+		
+number = int(input('Please enter a number '))
+for i in range(number):
+	print(fibo(i))
+    
